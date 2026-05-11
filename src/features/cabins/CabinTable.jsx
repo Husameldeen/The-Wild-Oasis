@@ -28,6 +28,7 @@ function CabinTable() {
   if (isLoading) return <Spinner />;
   // 1. FILTER
   const filteredValue = searchParams.get("discount") || "all";
+
   let filteredCabins;
 
   if (filteredValue === "all") filteredCabins = cabins;
