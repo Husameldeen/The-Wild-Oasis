@@ -4,6 +4,7 @@ import BookingDataBox from "../../features/bookings/BookingDataBox";
 import { useBooking } from "../../features/bookings/useBooking";
 import { useConfirmCheckin } from "./useConfirmCheckin";
 import { useSettings } from "../settings/useSettings";
+import { formatCurrency } from "../../utils/helpers";
 
 import styled from "styled-components";
 import Row from "../../ui/Row";
@@ -13,8 +14,6 @@ import Button from "../../ui/Button";
 import ButtonText from "../../ui/ButtonText";
 import Spinner from "../../ui/Spinner";
 import CheckBox from "../../ui/CheckBox";
-
-import { formatCurrency } from "../../utils/helpers";
 
 const Box = styled.div`
   /* Box */
