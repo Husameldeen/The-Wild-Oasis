@@ -17,7 +17,6 @@ function ProtectedRoute({ children }) {
   // 1. LOAD AUTHENTICATED USER FROM CACH AND COMPARE IT WITH SUPABASE
   const { isLoading, isAuthenticated } = useUser();
 
-  console.log(isAuthenticated);
   // 2. IF THERE IS NO USER REDIRECT TO LOGIN PAGE
   useEffect(
     function () {

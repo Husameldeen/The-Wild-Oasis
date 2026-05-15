@@ -1,7 +1,10 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Toaster } from "react-hot-toast";
+
 import styled from "styled-components";
 import GlobalStyles from "./styles/GlobalStyle";
-import Heading from "./ui/Heading";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Bookings from "./pages/Bookings";
 import Cabins from "./pages/Cabins";
@@ -10,13 +13,11 @@ import Settings from "./pages/Settings";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
-import AppLayout from "./ui/Applayout";
-import ProtectedRoute from "./ui/ProtectedRoute";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { Toaster } from "react-hot-toast";
 import Booking from "./pages/Booking";
 import Checkin from "./pages/CheckIn";
+import Heading from "./ui/Heading";
+import AppLayout from "./ui/Applayout";
+// import ProtectedRoute from "./ui/ProtectedRoute";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,9 +41,9 @@ function App() {
         <Routes>
           <Route
             element={
-              <ProtectedRoute>
-                <AppLayout />
-              </ProtectedRoute>
+              // <ProtectedRoute>
+              <AppLayout />
+              // </ProtectedRoute>
             }
           >
             <Route index element={<Navigate replace to="dashboard" />} />
