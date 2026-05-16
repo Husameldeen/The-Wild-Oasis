@@ -4,12 +4,11 @@ import Form from "../../ui/Form";
 import Input from "../../ui/Input";
 import SpinnerMini from "../../ui/SpinnerMini";
 import FormRowVertical from "../../ui/FormRowVertical";
-// import { login } from "../../services/apiauth";
 import { useLogin } from "./useLogin";
 
 function LoginForm() {
-  const [email, setEmail] = useState("husam@gmail.com");
-  const [password, setPassword] = useState("husam");
+  const [email, setEmail] = useState("tagwa@gmail.com");
+  const [password, setPassword] = useState("tagwa123");
 
   const { login, isLoading } = useLogin();
 

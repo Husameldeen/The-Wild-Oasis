@@ -10,11 +10,16 @@ import SpinnerMini from "../../ui/SpinnerMini";
 
 function SignupForm() {
   const { signup, isLoading } = useSignup();
-  const { register, formState, getValues, handleSubmit } = useForm();
+  const { register, formState, getValues, handleSubmit, reset } = useForm();
   const { errors } = formState;
 
   function onSubmit({ fullName, email, password }) {
-    signup({ fullName, email, password });
+    signup(
+      { fullName, email, password },
+      {
+        onSettled: () => reset(),
+      },
+    );
   }
 
   return (
@@ -86,6 +91,7 @@ function SignupForm() {
           variation="secondary"
           type="reset"
           disabled={isLoading}
+          onClick={reset}
         >
           Cancel
         </Button>
