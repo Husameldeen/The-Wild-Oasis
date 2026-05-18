@@ -31,6 +31,7 @@ function CheckinBooking() {
 
   const { settings, isLoading: isLoadingSettings } = useSettings();
 
+  // eslint-disable-next-line
   useEffect(() => setConfirmedPaid(booking?.isPaid ?? false), [booking]);
 
   const moveBack = useMoveBack();
